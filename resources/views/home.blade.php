@@ -1,27 +1,23 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout.app')
 
-    <title>Laravel</title>
+@section('main')
 
-
-
-    </head>
-    <body>
-      <div class="container">
-        <div class="card">
-          <div class="content-card"></div>
-          @foreach ($movies as $movie)
-          {{ $movie-> title }}
-          {{ $movie-> original_title }}
-          {{ $movie-> nationality }}
-          {{ $movie-> date }}
-          {{ $movie-> vote }}
-          <br>
-          @endforeach
-        </div>
+<div class="container">
+  @foreach ($movies as $movie)
+  <div class="card">
+    <div class="content-card">
+      <div class="title">
+        <h1>{{ $movie-> title }}</h1>
+        <h3>{{ $movie-> original_title }}</h3>
       </div>
-    </body>
-</html>
+      <div class="info">
+        <h5>{{ $movie-> nationality }}</h5>
+        <p>{{ $movie-> date }}</p>
+        <p>{{ $movie-> vote }}</p>
+      </div>
+    </div>
+  </div>
+  @endforeach
+</div>
+
+@endsection

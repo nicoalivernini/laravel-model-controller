@@ -1,0 +1,42 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  .card {
+    width: calc(100% / 4 - 20px);
+    padding: 0 10px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    .content-card {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title {
+        h1 {
+          font-size: 30px;
+        }
+        h3 {
+          font-size: 17px;
+          font-style: italic;
+        }
+      }
+      .info {
+        h5 {
+          padding-top: 10px;
+          padding-bottom: 15px;
+          font-family: sans-serif;
+        }
+        p {
+          font-style: italic;
+          padding-bottom: 5px;
+          font-family: sans-serif;
+        }
+      }
+    }
+  }
+}
